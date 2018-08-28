@@ -6,6 +6,8 @@ function getGSAmount() {
   if (!player.galacticSacrifice.upgrades.includes(52)){
     if (y>100) y = Math.pow(316.22*y,1/3)
     else if (y>10) y = Math.pow(10*y , .5)
+  } else{
+    if (y>100) y = y = Math.pow(100*y , .5)
   }
   let z = 1
   if (player.challenges.length >17) {
@@ -119,7 +121,7 @@ let galUpgrade43 = function () {
 }
 
 let galUpgrade51 = function () {
-  return player.galacticSacrifice.galaxyPoints.pow(.00001)
+  return player.galacticSacrifice.galaxyPoints.pow(.0001)
 }
 
 function galacticSacrifice() {
@@ -175,8 +177,8 @@ let galUpgradeCosts = {
   31: 2,
   32: 8,
   33: 1000,
-  41: new Decimal('1e2000'),
-  42: new Decimal(1/0),
+  41: new Decimal('1e1800'),
+  42: new Decimal('1e2000'),
   43: new Decimal(1/0),
   51: new Decimal(1/0),
   52: new Decimal(1/0),
